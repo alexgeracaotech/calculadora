@@ -1,2 +1,4 @@
-# calculadora
-Proposta de desenvolvimento de calculadora usando React. FS26, Digital College.
+
+# Calculadora
+
+- Proposta de desenvolvimento de calculadora usando React. FS26, Digital College.
