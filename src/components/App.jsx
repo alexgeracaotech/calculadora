@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState('0');
 
   return (
     <>
@@ -90,7 +90,7 @@ const App = () => {
             setValue={setValue}
           />
           <Button
-            type='x'
+            type='*'
             backgroundColor='bg-gray-700'
             hover='hover:bg-gray-600'
             setValue={setValue}

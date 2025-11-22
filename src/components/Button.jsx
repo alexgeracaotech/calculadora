@@ -1,5 +1,5 @@
 
-const Button = ({ backgroundColor, hover, type }) => {
+const Button = ({ backgroundColor, hover, type, setValue }) => {
 
   const style = `
     button
@@ -7,7 +7,33 @@ const Button = ({ backgroundColor, hover, type }) => {
     ${hover}
   `;
 
-  return <button className={style}>{type}</button>
+  function calculate() {
+    if (type === 'AC') {
+      setValue('0');
+      return;
+    }
+
+    if (type === '=') {
+      setValue((value) => {
+        return String(eval(value));
+      });
+
+      return;
+    }
+
+    setValue((value) => {
+      if (value === '0') {
+        return type;
+      }
+
+      return value + type;
+    });
+  }
+
+  return <button
+    className={style}
+    onClick={calculate}
+  >{type}</button>
 }
 
 export default Button;
